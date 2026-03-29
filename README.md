@@ -1,6 +1,6 @@
-# ⚡ NexTech Store
+# E-commerce
 
-E-commerce de tecnologia construído com React 18, CSS Modules e Context API.
+Projeto de estudo de um sistema de E-commerce focado em produtos de tecnologia construído com React 18, CSS Modules e Context API.
 
 ## Estrutura do projeto
 
