@@ -64,7 +64,7 @@ Acesse: http://localhost:3000
 - **CSS Modules** – zero conflito de estilos
 - **Context API** – estado global sem Redux
 
-## Próximos passos sugeridos
+## Próximos passos
 
 - Integrar com uma API REST (ex: Node + Express, ou Firebase)
 - Adicionar autenticação para a área admin (ex: Firebase Auth)
