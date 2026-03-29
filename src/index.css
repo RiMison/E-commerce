@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── DARK THEME (default) ── */
+:root[data-theme="dark"] {
+  --accent: #00E5FF;
+  --accent-dim: rgba(0, 229, 255, 0.12);
+  --accent-border: rgba(0, 229, 255, 0.35);
+  --accent2: #FF3CAC;
+  --accent2-dim: rgba(255, 60, 172, 0.12);
+  --accent3: #F5A623;
+
+  --bg:    #0A0A0F;
+  --bg2:   #111118;
+  --bg3:   #1A1A25;
+  --bg4:   #22222F;
+  --bg5:   #2A2A3C;
+
+  --text:        #F0F0FF;
+  --text-muted:  #8888AA;
+  --text-faint:  #55556A;
+
+  --border:       rgba(255,255,255,0.08);
+  --border-hover: rgba(0, 229, 255, 0.4);
+
+  --card-bg:      #111118;
+  --card-border:  rgba(255,255,255,0.07);
+
+  --nav-bg: rgba(10,10,15,0.88);
+
+  --danger: #ff4d4d;
+  --success: #00e676;
+  --warning: #F5A623;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+/* ── LIGHT THEME ── */
+:root[data-theme="light"] {
+  --accent: #0097A7;
+  --accent-dim: rgba(0, 151, 167, 0.1);
+  --accent-border: rgba(0, 151, 167, 0.4);
+  --accent2: #D81B60;
+  --accent2-dim: rgba(216, 27, 96, 0.1);
+  --accent3: #E65100;
+
+  --bg:    #F5F5FA;
+  --bg2:   #FFFFFF;
+  --bg3:   #EEEEF5;
+  --bg4:   #E4E4EF;
+  --bg5:   #D8D8E8;
+
+  --text:        #0D0D1A;
+  --text-muted:  #606080;
+  --text-faint:  #9090A8;
+
+  --border:       rgba(0,0,0,0.09);
+  --border-hover: rgba(0, 151, 167, 0.5);
+
+  --card-bg:      #FFFFFF;
+  --card-border:  rgba(0,0,0,0.07);
+
+  --nav-bg: rgba(245,245,250,0.88);
+
+  --danger: #D32F2F;
+  --success: #2E7D32;
+  --warning: #E65100;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.07);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Syne', sans-serif;
+}
+
+button {
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--bg5); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-faint); }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.fade-in { animation: fadeIn 0.35s ease both; }
+.slide-in { animation: slideIn 0.3s ease both; }

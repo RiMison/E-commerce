@@ -1,0 +1,36 @@
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--bg3);
+  border: 1px solid var(--accent-border);
+  border-radius: 12px;
+  padding: 12px 18px;
+  color: var(--text);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+  animation: toastIn 0.3s ease both;
+  box-shadow: var(--shadow-md);
+}
+
+.toast.danger {
+  border-color: rgba(255, 77, 77, 0.4);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.success .dot { background: var(--accent); }
+.danger  .dot { background: var(--danger); }
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(16px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
