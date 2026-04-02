@@ -4,19 +4,18 @@ Projeto de estudo de um sistema de E-commerce focado em produtos de tecnologia c
 
 ## Estrutura do projeto
 
-```
 src/
 ├── contexts/
 │   ├── StoreContext.jsx   # Estado global: produtos, carrinho, navegação
-│   └── ThemeContext.jsx   # Tema dark/light com persistência em localStorage
+│   └── ThemeContext.jsx   # Tema dark/light
 ├── data/
-│   └── products.js        # Dados iniciais dos produtos e categorias
+│   └── products.js        # Dados dos produtos e categorias
 ├── components/
-│   ├── Navbar.jsx         # Navegação principal + toggle de tema
+│   ├── Navbar.jsx         # Navegação principal + botão tema dark/light
 │   ├── Navbar.module.css
 │   ├── ProductCard.jsx    # Card reutilizável de produto
 │   ├── ProductCard.module.css
-│   ├── Toast.jsx          # Notificações de feedback
+│   ├── Toast.jsx        
 │   └── Toast.module.css
 ├── pages/
 │   ├── Home.jsx           # Hero + chamada para ação
@@ -32,7 +31,7 @@ src/
 ├── App.jsx                # Roteador e providers
 ├── index.js               # Entry point
 └── index.css              # Variáveis CSS globais (temas dark/light)
-```
+
 
 ## Como rodar
 
@@ -46,12 +45,12 @@ Acesse: http://localhost:3000
 ## Funcionalidades
 
 ### Loja
-- **Hero** – banner principal com animações e estatísticas
-- **Catálogo** – filtros por categoria + busca em tempo real
-- **Detalhe do produto** – especificações, quantidade, alerta de estoque baixo
-- **Carrinho** – CRUD completo, cálculo de frete grátis acima de R$ 2.000
+- Hero – banner principal com animações e estatísticas
+- Catálogo – filtros por categoria + busca em tempo real
+- Detalhe do produto – especificações, quantidade, alerta de estoque baixo
+- Carrinho – CRUD completo, cálculo de frete grátis acima de R$ 2.000
 
-### Painel de gestão (`/admin`)
+### Painel de gestão (admin)
 - Dashboard com KPIs (total de produtos, valor em estoque, categorias, estoque baixo)
 - Tabela de produtos com busca
 - Criação de produtos com picker de emoji e specs dinâmicas
@@ -59,10 +58,8 @@ Acesse: http://localhost:3000
 - Remoção com confirmação dupla
 
 ### UX
-- **Modo dark/light** com persistência em localStorage
-- **Toast notifications** ao adicionar ao carrinho / salvar produto
-- **CSS Modules** – zero conflito de estilos
-- **Context API** – estado global sem Redux
+- Modo dark/light com persistência em localStorage
+- Toast notifications ao adicionar ao carrinho / salvar produto
 
 ## Próximos passos
 
