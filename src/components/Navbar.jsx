@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav className={styles.nav}>
       <button className={styles.logo} onClick={() => navigate('home')}>
-        ⚡ E-commerce
+        E-commerce
       </button>
 
       <div className={styles.links}>
